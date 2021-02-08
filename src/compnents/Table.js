@@ -7,9 +7,9 @@ const employees = props.employees
         <div key = {
           employee.login.uuid
         } style = {{display:"flex", flexDirection:"row", width:"100%"}}> 
-         <div style = {{flex:1}}>  {employee.name.first} </div>
-         <div style = {{flex:1}}>  {employee.name.last} </div>
-         <div style = {{flex:1}}>  {new Date(employee.dob.date).toLocaleDateString("en-US")} </div>
+         <div style = {{flex:1}}>  {employee.name.first} {employee.name.last} </div>
+         <div style = {{flex:1}}>  {employee.email} </div>
+         <div style = {{flex:1}}>  {employee.phone} </div>
 
 
 
@@ -20,5 +20,4 @@ const employees = props.employees
   }</div>)
 }
 export default Table
-
 
