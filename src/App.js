@@ -1,30 +1,14 @@
-import React, {
-  useEffect, useState 
-} from "react"
-import {
-  getEmployees
-} from "./services/employees.js"
-import Table from "./compnents/Table";
-import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Search from "../src/pages/Search"
+
 
 function App() {
-  const [employees, setEmployees] = useState([])
-  useEffect( () => {
-    getEmployees()
-    .then(result =>{
-      console.log(result)
-      setEmployees(result.results)
-    })
-
-  },[])
-
-
-
   return (
-    <div className="App">
-      <Table employees = {employees}/> 
-
+    <Router basename={process.env.PUBLIC_URL}>
+      <div>
+      <Route exact path="/" component={Search} />
       </div>
+    </Router>
   );
 }
 
