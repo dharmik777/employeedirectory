@@ -6,15 +6,8 @@ function SearchResults(props){
         <div className="SearchResults">
             <Container>
                 <Table striped>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                        </tr>
-                    </thead>
+        
                     <tbody>
-                    {/* "map" through our getUsers results for all users */}
                         {props.results.map(result => (
                             <tr key={result}>
                                 <td>
