@@ -1,11 +1,10 @@
 import React from "react"
-import { Container,Table } from 'react-bootstrap'
 
 function SearchResults(props){
     return (
         <div className="SearchResults">
-            <Container>
-                <Table striped>
+           
+                
         
                     <tbody>
                         {props.results.map(result => (
@@ -22,8 +21,7 @@ function SearchResults(props){
                             </tr>
                         ))}
                     </tbody>
-                </Table>
-            </Container>
+                
         </div>
     )
 }
